@@ -29,6 +29,7 @@ if __name__ == '__main__':
         img = img.to(cuda)
         keypoints = keypoints.to(cuda)
         weights = weights.to(cuda)
+        print(weights.shape)
 
         # normalize keypoints to [0, 1] range
         keypoints = normalize_keypoints(keypoints, img.shape)
